@@ -112,7 +112,7 @@ void MarkAndSortDictionary(FILE *fd,FILE *new_fd)
 
     tem_fd = fopen(FILE_TEMPORY, "w+"); // 临时的中间文件
     // 读字典中的单词
-    while(fgets(word,WORD_MAX_LEN,fd) != NULL) // fgets函数如果督导文件结尾会返回NULL
+    while(fgets(word,WORD_MAX_LEN,fd) != NULL) // fgets函数如果读到文件结尾会返回NULL
     {
         if (word[strlen(word)-1] == '\n')
         {
